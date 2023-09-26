@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Grid for figma</title>
+    <style>
+    .rectangl_1 {
+        display: grid;
+        height: 95vh;
+        grid-template-columns: 300px 1fr 300px;
+        grid-template-rows: 100px 1fr 200px  ;
+        background-color: beige;
+        gap: 20px;
+    }
+    .frame_20 {
+        display: grid;
+        grid-template-columns: 100px 1fr ;
+        grid-template-rows: 100% 1fr;
+        grid-area: 1/2/2/3;
+        background-color: aqua;
+    }
+    .group_19-2 {
+        display: grid;
+        /*grid-template-columns: ;
+        grid-template-rows: ;*/
+        background-color: aquamarine;
+    }
+    .group {
+        /*width: ;
+        height: ;*/
+        background-color: gray;
+    }
+    .vektor {
+        /*width: ;
+        height: ;*/
+        background-color: rgb(111, 68, 68);
+    }
+    .frame_1 {
+        /*width: ;
+        height: ;*/
+        background-color: rgb(68, 111, 81);
+    }
+    .text {
+        grid-area: 2/2/3/3;
+        align-self: self-end;
+        justify-self: start;
+        /*width: ;
+        height: ;*/
+        background-color: rgb(88, 129, 137);
+    }
+    .group_20 {
+        display: grid;
+        grid-area: 3/2/4/3;
+        align-self: stretch;
+        margin-bottom: 40px;
+        /*grid-template-columns: ;
+        grid-template-rows: ;*/
+        background-color: rgb(212, 212, 119);
+    }
+    .list {
+        background-color: rgb(102, 102, 228);
+    }
+    .button_2 {
+    background-color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="rectangl_1">
+        <header class="frame_20">
+            <div class="group_19_2">
+                <div class="group">
+                    
+                </div>
+                <div class="vektor">
+                    
+                </div>
+            </div>
+            <div class="Frame_1">
+                <nav class="nav">
+                    <a href="#">Главная</a>
+                    <a href="#">Про гида</a>
+                    <a href="#">Программа тура</a>
+                    <a href="#">Стоимость</a>
+                    <a href="#">Блог</a>
+                    <a href="#">Контакты</a>
+                </nav>
+                <button class="Button_1">
+                    
+                </button>
+            </div>
+        </header>
+        <div class="text">
+            <h1 class="h1">насладись прогулкой в горах с командой единомышленников</h1>
+        </div>
+        <footer class="group_20">
+            <div class="Frame_32">
+                <div class="List List_1">
+                    
+                </div>
+                <div class="List List_2">
+                    
+                </div>
+                <div class="List List_2">
+                    
+                </div>
+                <button class="button_2">
+                    
+                </button>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
