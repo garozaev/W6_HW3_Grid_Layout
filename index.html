@@ -9,7 +9,7 @@
     <style>
     .rectangl_1 {
         display: grid;
-        height: 95vh;
+        min-height: 95vh;
         grid-template-columns: 100px 1fr 100px;
         grid-template-rows: 72px 1fr 200px  ;
         background-color: beige;
@@ -63,7 +63,7 @@
     }
     .text {
         grid-area: 2/2/3/3;
-        align-self: self-end;
+        align-self: end;
         justify-self: start;
         /*width: ;
         height: ;*/
@@ -81,14 +81,44 @@
     .frame_32 {
         display: grid;
         grid-template-columns:1fr 1fr 1fr 1fr ;
-        /*grid-template-rows: ;*/
+        /*grid-template-rows: 1fr 1fr 1fr 1fr ;*/
         justify-items: center;
         align-items: center;
         margin: 40px 10px 40px 10px;
         background-color: aquamarine;
     }
-    .list {
-        background-color: rgb(102, 102, 228);
+    .list_1,
+    .list_2,
+    .list_3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: stretch;
+        align-items: center;
+        gap: 3px;
+        background-color: bisque;
+    }
+    .location {
+        display: grid;
+        grid-area: 1/1/2/3;
+        justify-items: start;
+        align-items: center;
+        grid-template-columns: 200px 70px;
+        grid-template-rows: 15px 15px;
+        background-color: rgb(228, 214, 52);
+    }
+    .option_1 {
+        grid-area: 1/2/3/3;
+        justify-self: end;
+        background-color: rgb(9, 87, 45);
+    }
+    .text_1 {
+        grid-area: 1/1/3/2;
+        text-align: start;
+        background-color: blueviolet;
+    }
+    .label {
+        grid-area: 2/1/3/3;
+        background-color: white;
     }
     .button_2 {
     background-color: white;
@@ -125,34 +155,55 @@
         </div>
         <footer class="group_20">
             <div class="frame_32">
-                <div class="list list_1">
-                    <div>
-                        <select id="select_1">
-                        <option value="1">Локация для тура</option>
-                        <option value="2"> жопка</option>
-                        <option value="3"> хвост</option>
-                        </select>
-                        <label for="select_">Выберите из списка</label>
+                <div class="list_1">
+                    <div class="location">
+                        <div class="text_1">
+                            Локация направления
+                        </div>
+                        <div class="option_1">
+                            <select>
+                                <option value="1"></option>
+                                <option value="2">На земле</option>
+                                <option value="3">В небесах</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="label">
+                        выберите из списка
                     </div>
                 </div>
-                <div class="list list_2">
-                    <div>
-                        <select id="select_2">
-                        <option value="1">Дата похода</option>
-                        <option value="2">Всегла в пути</option>
-                        <option value="3">Никогда</option>
-                        </select>
-                        <label for="select_2">Укажите диапазон</label>
+                <div class="list_2">
+                    <div class="location">
+                        <div class="text_1">
+                            Когда?
+                        </div>
+                        <div class="option_1">
+                            <select>
+                                <option value="1"></option>
+                                <option value="2">Сейчас</option>
+                                <option value="3">Завтра</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="label">
+                        укажи диапазон
                     </div>
                 </div>
-                <div class="list list_2">
-                    <div>
-                        <select id="select_3">
-                        <option value="1">Участники</option>
-                        <option value="2">жопка</option>
-                        <option value="3">хвост</option>
-                        </select>
-                        <label for="select_3">Миннимум 4 человека</label>
+                <div class="list_3">
+                    <div class="location">
+                        <div class="text_1">
+                            участники
+                        </div>
+                        <div class="option_1">
+                            <select>
+                                <option value="1"></option>
+                                <option value="2">Только ты</option>
+                                <option value="3">Человечество</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="label">
+                        Выберите из списка
                     </div>
                 </div>
                 <button class="button_2">
