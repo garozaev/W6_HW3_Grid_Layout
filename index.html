@@ -12,7 +12,14 @@
         min-height: 95vh;
         grid-template-columns: 100px 1fr 100px;
         grid-template-rows: 72px 1fr 200px  ;
-        background-color: beige;
+        background-image: url(./assets/images/Rectangle\ 1.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-animation-size: cover;
+        -moz-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
         gap: 20px;
     }
     .frame_20 {
@@ -21,23 +28,31 @@
         grid-template-rows: 100% 1fr;
         grid-area: 1/2/2/3;
         margin-top: 20px;
-        background-color: aqua;
+        /*background-color: aqua;*/
     }
     .group_19_2 {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
         /*grid-template-columns: ;
         grid-template-rows: ;*/
-        background-color: rgb(193, 220, 104);
+        /*background-color: rgb(193, 220, 104);*/
     }
     .group {
+        justify-content: center;
+        align-content: center;
         /*width: ;
         height: ;*/
-        background-color: gray;
     }
     .vektor {
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        color: white;
         /*width: ;
         height: ;*/
-        background-color: rgb(111, 68, 68);
+        /*background-color: rgb(111, 68, 68);*/
     }
     .frame_1 {
         display: grid;
@@ -46,17 +61,20 @@
         /*width: ;
         height: ;*/
         align-self: center;
-        background-color: rgb(68, 111, 81);
+        /*background-color: rgb(68, 111, 81);*/
     }
     .nav {
         grid-area: 1/1/3/2;
         justify-self: end;
+        margin-left: 20px;
     }
     a {
         color: white;
         padding-right: 30px;
+        text-decoration-line: none;
     }
     .Button_1 {
+        height: 30px;
         grid-area: 1/2/3/3;
         color: white;
         background-color: black;
@@ -65,37 +83,54 @@
         grid-area: 2/2/3/3;
         align-self: end;
         justify-self: start;
+        font-size: large;
+        color: white;
+        opacity: 1;
         /*width: ;
         height: ;*/
-        background-color: rgb(88, 129, 137);
+        /*background-color: rgb(88, 129, 137);*/
     }
     .group_20 {
-        display: grid;
+        /*display: grid;*/
         grid-area: 3/2/4/3;
-        align-self: stretch;
-        margin-bottom: 40px;
+        align-self: center;
+        /*margin-bottom: 40px;*/
         /*grid-template-columns: ;
         grid-template-rows: ;*/
-        background-color: rgb(212, 212, 119);
+        opacity: 1;
+        /*background-color: rgb(212, 212, 119);*/
     }
     .frame_32 {
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr 1fr ;
-        /*grid-template-rows: 1fr 1fr 1fr 1fr ;*/
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100px;
+        /*grid-template-columns:1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr ;*/
         justify-items: center;
         align-items: center;
+        justify-content: space-around;
         margin: 40px 10px 40px 10px;
-        background-color: aquamarine;
+        border-radius: 5%;
+        
+        /*border: 2px solid black;*/
+        background-color: gray;
+        opacity: 0.5;
     }
     .list_1,
     .list_2,
     .list_3 {
         display: flex;
-        grid-template-columns: 1fr 1fr;
-        justify-items: stretch;
-        align-items: center;
-        gap: 3px;
-        background-color: bisque;
+        flex-direction: column;
+        /*grid-template-columns: 1fr 1fr;*/
+        /*justify-items: stretch;*/
+        align-items: start;
+        margin: 3px 3px 3px 3px;
+        padding: 5px 5px 5px 5px;
+        /*gap: 3px;*/
+        border: 2px solid white;
+        border-radius: 5%;
+        color: white;
+        /*background-color: bisque;*/
     }
     .location {
         display: grid;
@@ -104,25 +139,53 @@
         align-items: center;
         grid-template-columns: 200px 70px;
         grid-template-rows: 15px 15px;
-        background-color: rgb(228, 214, 52);
+        /*background-color: rgb(228, 214, 52);*/
     }
     .option_1 {
         grid-area: 1/2/3/3;
         justify-self: end;
-        background-color: rgb(9, 87, 45);
+        /*background-color: rgb(9, 87, 45);*/
     }
     .text_1 {
         grid-area: 1/1/3/2;
         text-align: start;
-        background-color: blueviolet;
+        /*background-color: rgb(164, 231, 82);*/
     }
     .label {
-        grid-area: 2/1/3/3;
-        background-color: white;
+        /*grid-area: 2/1/3/3;*/
+        justify-content: flex-start;
+        /*background-color: white;*/
     }
     .button_2 {
-    background-color: white;
-}
+        width: 280px;
+        height: 55px;
+        border-radius: 5%;
+        color: black;
+        opacity: 1;
+        border: 2px solid white;
+        /*background-color: white;*/
+    }
+    .frame_20,
+    .group_19_2,
+    .group,
+    .vektor,
+    .frame_1,
+    .nav,
+    .Button_1,
+    .text,
+    .group_20,
+    .frame_32,
+    .list_1,
+    .list_2,
+    .list_3,
+    .location,
+    .option_1,
+    .text_1,
+    .label,
+    .button_2
+
+
+
     </style>
 </head>
 <body>
@@ -130,10 +193,10 @@
         <header class="frame_20">
             <div class="group_19_2">
                 <div class="group">
-                    
+                    <img src="./assets/icons/Vector (1).png" alt="icon"/>
                 </div>
                 <div class="vektor">
-                    
+                    румтурум
                 </div>
             </div>
             <div class="frame_1">
@@ -186,7 +249,7 @@
                         </div>
                     </div>
                     <div class="label">
-                        укажи диапазон
+                        укажите диапазон
                     </div>
                 </div>
                 <div class="list_3">
@@ -203,7 +266,7 @@
                         </div>
                     </div>
                     <div class="label">
-                        Выберите из списка
+                        выберите из списка
                     </div>
                 </div>
                 <button class="button_2">
