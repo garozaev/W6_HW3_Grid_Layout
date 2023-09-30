@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../W6_HW3_Grid_Layout/assets/styles/normalize.css">
+    <link rel="stylesheet" href="../W6_HW3_Grid_Layout/assets/styles/style.css">
     <title>Grid for figma</title>
     <style>
-    .rectangl_1 {
-        display: grid;
-        min-height: 95vh;
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: 72px 1fr 200px  ;
+    body {
         background-image: url(./assets/images/Rectangle\ 1.png);
         background-repeat: no-repeat;
         background-position: center center;
@@ -20,9 +16,15 @@
         -moz-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
+    }
+    .rectangl_1 {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 72px 1fr 200px;
         gap: 20px;
     }
-    .frame_20 {
+    .header {
         display: grid;
         grid-template-columns: 132px 1fr;
         grid-template-rows: 100% 1fr;
@@ -30,36 +32,21 @@
         margin-top: 20px;
         /*background-color: aqua;*/
     }
-    .group_19_2 {
+    .logo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        /*grid-template-columns: ;
-        grid-template-rows: ;*/
         /*background-color: rgb(193, 220, 104);*/
     }
-    .group {
-        justify-content: center;
-        align-content: center;
-        /*width: ;
-        height: ;*/
-    }
-    .vektor {
-        width: 100%;
-        justify-content: center;
-        align-content: center;
+    .name {
         color: white;
-        /*width: ;
-        height: ;*/
-        /*background-color: rgb(111, 68, 68);*/
+        margin: 7px;
     }
-    .frame_1 {
+    .nav_batton {
         display: grid;
         grid-template-columns: 1fr 100px;
         grid-template-rows: 10px 10px;
-        /*width: ;
-        height: ;*/
         align-self: center;
         /*background-color: rgb(68, 111, 81);*/
     }
@@ -73,10 +60,11 @@
         padding-right: 30px;
         text-decoration-line: none;
     }
-    .Button_1 {
+    .button_consult {
         height: 30px;
         grid-area: 1/2/3/3;
         color: white;
+        border-radius: 0.5vw;
         background-color: black;
     }
     .text {
@@ -85,121 +73,91 @@
         justify-self: start;
         font-size: large;
         color: white;
-        opacity: 1;
-        /*width: ;
-        height: ;*/
         /*background-color: rgb(88, 129, 137);*/
     }
-    .group_20 {
-        /*display: grid;*/
+    .footer {
         grid-area: 3/2/4/3;
-        align-self: center;
-        /*margin-bottom: 40px;*/
-        /*grid-template-columns: ;
-        grid-template-rows: ;*/
-        opacity: 1;
-        /*background-color: rgb(212, 212, 119);*/
     }
-    .frame_32 {
+    .frame {
         display: flex;
         flex-wrap: wrap;
-        min-height: 100px;
-        /*grid-template-columns:1fr 1fr 1fr 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr ;*/
         justify-items: center;
         align-items: center;
         justify-content: space-around;
-        margin: 40px 10px 40px 10px;
-        border-radius: 5%;
-        
-        /*border: 2px solid black;*/
-        background-color: gray;
-        opacity: 0.5;
+        border-radius: 0.5vw;
+        background-color: rgba(251, 251, 251, 0.2);
     }
     .list_1,
     .list_2,
     .list_3 {
         display: flex;
         flex-direction: column;
-        /*grid-template-columns: 1fr 1fr;*/
-        /*justify-items: stretch;*/
         align-items: start;
         margin: 3px 3px 3px 3px;
         padding: 5px 5px 5px 5px;
-        /*gap: 3px;*/
-        border: 2px solid white;
-        border-radius: 5%;
+        border-radius: 0.5vh;
         color: white;
         /*background-color: bisque;*/
     }
-    .location {
+    .choise {
         display: grid;
-        grid-area: 1/1/2/3;
-        justify-items: start;
+        justify-items: center;
         align-items: center;
-        grid-template-columns: 200px 70px;
-        grid-template-rows: 15px 15px;
+        grid-template-columns: 170px 70px;
+        grid-template-rows: 25px 25px;
+        border: 2px solid white;
+        border-radius: 0.5vw;
         /*background-color: rgb(228, 214, 52);*/
     }
     .option_1 {
         grid-area: 1/2/3/3;
         justify-self: end;
+        align-self: center;
+        margin: 10px;
         /*background-color: rgb(9, 87, 45);*/
     }
     .text_1 {
         grid-area: 1/1/3/2;
-        text-align: start;
+        justify-self: start;
+        margin-left: 10px;
         /*background-color: rgb(164, 231, 82);*/
     }
     .label {
-        /*grid-area: 2/1/3/3;*/
-        justify-content: flex-start;
-        /*background-color: white;*/
+        justify-content: start;
+        margin: 10px;
+        /*background-color: rgb(218, 157, 59);*/
     }
-    .button_2 {
-        width: 280px;
-        height: 55px;
-        border-radius: 5%;
+    .button_choise {
+        width: 250px;
+        height: 50px;
+        align-self: self-start;
+        border-radius: 0.5vw;
+        margin-top: 8px;
+        border: none;
         color: black;
-        opacity: 1;
-        border: 2px solid white;
-        /*background-color: white;*/
+        opacity: 0.9;
     }
-    .frame_20,
-    .group_19_2,
-    .group,
-    .vektor,
-    .frame_1,
-    .nav,
-    .Button_1,
-    .text,
-    .group_20,
-    .frame_32,
-    .list_1,
-    .list_2,
-    .list_3,
-    .location,
-    .option_1,
-    .text_1,
-    .label,
-    .button_2
-
-
-
+    .selekt {
+        width: 20px;
+        height: 20px;
+        color: white;
+        border: none;
+        background-color: rgba(251, 251, 251, 0);
+    }
     </style>
 </head>
-<body>
+    <body>
     <div class="rectangl_1">
-        <header class="frame_20">
-            <div class="group_19_2">
-                <div class="group">
+        <header class="header">
+            <div class="logo">
+                <div class="img">
                     <img src="./assets/icons/Vector (1).png" alt="icon"/>
                 </div>
-                <div class="vektor">
-                    румтурум
+                <div class="name">
+                    Р У М Т У Р У М
                 </div>
             </div>
-            <div class="frame_1">
+            <div class="nav_batton">
                 <nav class="nav">
                     <a href="#">Главная</a>
                     <a href="#">Про Гида</a>
@@ -208,7 +166,7 @@
                     <a href="#">Блог</a>
                     <a href="#">Контакты</a>
                 </nav>
-                <button class="Button_1">
+                <button class="button_consult">
                     Консультация
                 </button>
             </div>
@@ -216,15 +174,15 @@
         <div class="text">
             <h1 class="h1">насладись прогулкой в горах с командой единомышленников</h1>
         </div>
-        <footer class="group_20">
-            <div class="frame_32">
+        <footer class="footer">
+            <div class="frame">
                 <div class="list_1">
-                    <div class="location">
+                    <div class="choise">
                         <div class="text_1">
                             Локация направления
                         </div>
                         <div class="option_1">
-                            <select>
+                            <select class="selekt">
                                 <option value="1"></option>
                                 <option value="2">На земле</option>
                                 <option value="3">В небесах</option>
@@ -236,12 +194,12 @@
                     </div>
                 </div>
                 <div class="list_2">
-                    <div class="location">
+                    <div class="choise">
                         <div class="text_1">
                             Когда?
                         </div>
                         <div class="option_1">
-                            <select>
+                            <select class="selekt">
                                 <option value="1"></option>
                                 <option value="2">Сейчас</option>
                                 <option value="3">Завтра</option>
@@ -253,12 +211,12 @@
                     </div>
                 </div>
                 <div class="list_3">
-                    <div class="location">
+                    <div class="choise">
                         <div class="text_1">
                             участники
                         </div>
                         <div class="option_1">
-                            <select>
+                            <select class="selekt">
                                 <option value="1"></option>
                                 <option value="2">Только ты</option>
                                 <option value="3">Человечество</option>
@@ -269,12 +227,11 @@
                         выберите из списка
                     </div>
                 </div>
-                <button class="button_2">
+                <button class="button_choise">
                     Найти программу
                 </button>
             </div>
         </footer>
     </div>
-    
-</body>
+    </body>
 </html>
